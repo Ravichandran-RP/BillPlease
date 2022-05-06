@@ -3,14 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#07FAC1"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Amount" />
+        android:text="Amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F4B40F"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextAmount"
@@ -18,13 +23,20 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter the amount"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textColor="#B30EE1"
+        android:textColorHint="#B30EE1"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pax" />
+        android:text="Pax"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F4B40F"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextPax"
@@ -32,7 +44,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter the number of people"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="#B30EE1"
+        android:textColorHint="#B30EE1"
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,6 +61,8 @@
             android:layout_weight="1"
             android:checked="false"
             android:text="ToggleButton"
+            android:textColorHighlight="#EFC908"
+            android:textColorLink="#EFC908"
             android:textOff="NO SVS"
             android:textOn="SVS" />
 
@@ -56,6 +73,7 @@
             android:layout_weight="1"
             android:checked="false"
             android:text="ToggleButton"
+            android:textColorLink="#EFC908"
             android:textOff="NO GST"
             android:textOn="GST" />
     </LinearLayout>
@@ -64,7 +82,11 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Discount (%)" />
+        android:text="Discount (%)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F4B40F"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextDiscount"
@@ -72,7 +94,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter discount %"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textColor="#B30EE1"
+        android:textColorHint="#B30EE1"
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,47 +113,71 @@
                 android:id="@+id/radioButtonCash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Cash" />
+                android:layout_weight="1"
+                android:shadowColor="#EA0909"
+                android:text="Cash"
+                android:textColor="#F41C08"
+                android:textColorHighlight="#F41C08"
+                android:textColorHint="#EA0909"
+                android:textColorLink="#F41C08"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:buttonTint="#ED0707" />
 
             <RadioButton
                 android:id="@+id/radioButtonPaynow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Paynow" />
+                android:layout_weight="1"
+                android:text="Paynow"
+                android:textColor="#EA0909"
+                android:textColorHighlight="#F41C08"
+                android:textColorHint="#EA0909"
+                android:textColorLink="#F41C08"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:buttonTint="#ED0707" />
         </RadioGroup>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/Split"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Split" />
+            android:text="Split"
+            app:backgroundTint="#DCC70E" />
 
         <Button
             android:id="@+id/Reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Reset" />
+            android:text="Reset"
+            app:backgroundTint="#DCC70E" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/Total"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FAF9F8"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/EachPay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#FAF9F8"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
