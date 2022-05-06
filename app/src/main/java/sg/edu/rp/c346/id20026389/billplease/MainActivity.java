@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button reset;
         TextView total;
         TextView eachpay;
+        RadioGroup paymentmethod;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         reset=findViewById(R.id.Reset);
         total=findViewById(R.id.Total);
         eachpay=findViewById(R.id.EachPay);
+        paymentmethod=findViewById(R.id.RadioGroupPayment);
 
         split.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +58,14 @@ public class MainActivity extends AppCompatActivity {
 
                     total.setText("Total Bill: $" + String.format("%.2f", cost));
                     int people=Integer.parseInt(pax.getText().toString());
-                    eachpay.setText("Each Pays: $"+String.format("%.2f",cost/people));
+                    String response="Each Pays: $"+String.format("%.2f",cost/people);
+                    int checkedRadioId=paymentmethod.getCheckedRadioButtonId();
+                    if(checkedRadioId==R.id.radioButtonCash){
+                        response+=" in cash";
+                    }else{
+                        response+=" via Paynow to 912345678";
+                    }
+                    eachpay.setText(response);
                 }
             }
         });
@@ -67,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 svs.setChecked(false);
                 gst.setChecked(false);
                 discount.setText("");
+                total.setText("");
+                eachpay.setText("");
             }
         });
     }
