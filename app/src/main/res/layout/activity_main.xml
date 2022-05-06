@@ -60,6 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="false"
+            android:shadowColor="#F4DC09"
             android:text="ToggleButton"
             android:textColorHighlight="#EFC908"
             android:textColorLink="#EFC908"
